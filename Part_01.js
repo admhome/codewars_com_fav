@@ -1,3 +1,10 @@
+/*
+	HELPERS WEB SITES
+	https://regex101.com/
+ */
+ 
+ // String Chunks
+
 function stringChunk(str, n) {
 	if (n <= 0)
 	{
@@ -47,3 +54,22 @@ function stringChunk(str, n) {
 
 stringChunk('codewars code', 2);
 
+// Regex validate PIN code
+
+function validatePIN (pin) {
+	return (pin.match(/^(\d{6}|\d{4})$/gim) == null) ? false : true;
+}
+
+// You're a square!
+
+var isSquare = function(n){
+	if (n>=0)
+	{
+		var sqrt = Math.sqrt(n);
+		return sqrt == Math.floor(sqrt);
+	}
+	else
+	{
+		return false;
+	}
+}
