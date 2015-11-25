@@ -98,3 +98,29 @@ function digital_root(n) {
 
 console.log("res: " + digital_root(16));
 console.log("res: " + digital_root(942));
+
+// Playing with digits
+
+function digPow(n, p){
+	n += '';
+
+	var
+		l = n.length,
+		r = 0,
+		d = 0;
+
+	for (var i = 0; i < l; i++)
+	{
+		r += Math.pow(parseInt(n.charAt(i)), p);
+		p++;
+	}
+
+	rd = r / parseInt(n);
+
+	return (rd === parseInt(rd, 10)) ? rd : -1;
+}
+
+console.log(digPow(89, 1));
+console.log(digPow(92, 1));
+console.log(digPow(695, 2));
+console.log(digPow(46288, 3));
