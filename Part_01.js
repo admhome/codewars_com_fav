@@ -73,3 +73,28 @@ var isSquare = function(n){
 		return false;
 	}
 }
+
+// Sum of Digits / Digital Root
+
+function digital_root(n) {
+	n += '';
+	l = n.length;
+	r = 0;
+
+	for (var i = 0; i < l; i++)
+	{
+		r += parseInt(n.charAt(i));
+	}
+
+	if ( (r += '').length > 1)
+	{
+		return digital_root(r);
+	}
+	else
+	{
+		return parseInt(r);
+	}
+}
+
+console.log("res: " + digital_root(16));
+console.log("res: " + digital_root(942));
